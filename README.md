@@ -14,3 +14,16 @@ https://wikidocs.net/book/1665
 ## 문제점   
 -웹소켓으로는 한번에 여러 종목의 가격을 표시할수 없다   
 웹소켓이 초당 5개밖에 가져올수없어서   
+
+## 설명
+### main
+프로그램의 메인화면   
+
+### overview
+코인의 가격정보   
+
+### changeLanguage
+코인의 티커를 한국어로 번역   
+
+### upbitWebsocket
+웹소켓   
