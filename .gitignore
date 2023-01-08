@@ -1,0 +1,3 @@
+###폴더무시
+__pycache__/
+.vscode/
