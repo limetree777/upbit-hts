@@ -105,4 +105,11 @@
 'KRW-NU' : '누사이퍼', 
 'KRW-AAVE' : '에이브', 
 'KRW-1INCH' : '1인치네트워크', 
-'KRW-ALGO' : '알고랜드',}
+'KRW-ALGO' : '알고랜드',
+'KRW-NEAR' : '니어프로토콜',
+'KRW-AVAX' : '아발란체',
+'KRW-T' : '쓰레스홀드',
+'KRW-CELO' : '셀로',
+'KRW-GMT' : '스테픈',
+'KRW-APT' : '앱토스',
+}
