@@ -51,16 +51,22 @@ class OverViewWorker(QThread):
         super().__init__()
         self.ticker = ticker
         self.alive = True
+        self.websocketManager = upbitWebsocket.WebSocketManager("ticker", [self.ticker])
 
     def run(self): #웹소켓으로 코인 데이터를 받아 전송해준다
         #wm = WebSocketManager("ticker", [self.ticker])
-        wm = upbitWebsocket.WebSocketManager("ticker", [self.ticker])
+        
         while self.alive:
-            data = wm.get()
+            data = self.websocketManager.get()
             self.dataSent.emit(str  (data['code'               ]),
                                float(data['trade_price'        ]),
                                float(data['signed_change_rate' ]),
                                float(data['acc_trade_price_24h']))
+    
+    def terminate(self):
+        self.websocketManager.terminate()
+        self.quit()
+
 
 
 if __name__ == "__main__":

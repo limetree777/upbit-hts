@@ -3,6 +3,7 @@ import asyncio
 import json
 import uuid
 import multiprocessing as mp
+import atexit
 
 class WebSocketManager(mp.Process):
     """웹소켓을 관리하는 클래스
@@ -58,6 +59,8 @@ class WebSocketManager(mp.Process):
     def terminate(self):
         self.alive = False
         super().terminate()
+    
+    atexit.register(terminate) #프로그램 종료시 꺼지게
 
 
 if __name__ == "__main__":
